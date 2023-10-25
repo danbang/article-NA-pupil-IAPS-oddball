@@ -6,7 +6,7 @@ This repository contains data and code supporting:
 
 <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(23)01355-6">Bang et al. (2023) “Noradrenaline tracks emotional modulation of attention in human amygdala” Current Biology</a>
 
-FigureX.m scripts will generate the requested plots and associated statistical analyses.
+FigureX.m scripts will generate the specified plots and associated statistical analyses.
 
 Note that the scripts use the name "norepinephrine (NE)" instead of "noradrenaline (NA)". 
 
