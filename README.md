@@ -10,7 +10,7 @@ FigureX.m scripts will generate the specified plots and associated statistical a
 
 Note that the scripts use the name "norepinephrine (NE)" instead of "noradrenaline (NA)". 
 
-The paths in these scripts require altering the directory variable ‘repoBase’ to point to your local version of the repository.
+The paths in these scripts require altering the directory variable "repoBase" to point to your local version of the repository.
 
 The scripts relating to pupil-NA coupling (Figure4.m and Figure S4.m) use the input and output files for the HMM analysis. An accompanying HMM tutorial for the paper can be found <a href="https://github.com/Beniamino92/mvHMM/tree/main/HMM-NE-pupil-IAPS-oddball">here</a>.
 
