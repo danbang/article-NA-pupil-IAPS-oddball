@@ -12,6 +12,6 @@ Note that some scripts may use the name "norepinephrine (NE)" instead of "noradr
 
 The paths in these scripts require altering the directory variable "dirBase" to point to your local version of the repository.
 
-The scripts relating to pupil-NA coupling (Figure4.m and Figure S4.m) use the input and output files for the HMM analysis. An accompanying HMM tutorial for the paper can be found <a href="https://github.com/Beniamino92/mvHMM/tree/main/HMM-NE-pupil-IAPS-oddball">here</a>.
+The scripts relating to pupil-NA coupling (Figure4.m and Figure S4.m) use the input and output files for the HMM analysis for simplicity. An accompanying HMM tutorial for the paper can be found <a href="https://github.com/Beniamino92/mvHMM/tree/main/HMM-NE-pupil-IAPS-oddball">here</a>.
 
 This code is being released with a permissive open-source license. You should feel free to use or adapt the code as long as you follow the terms of the license. If you make use of the code, we would appreciate that you cite the paper.
