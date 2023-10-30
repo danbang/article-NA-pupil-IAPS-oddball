@@ -1,6 +1,6 @@
 # article-NA-pupil-IAPS-oddball
 
-**NOTE: The repository will be populated soon.**
+**NOTE: The repository is in the process of being populated.**
 
 This repository contains data and code supporting:
 
