@@ -8,7 +8,7 @@ This repository contains data and code supporting:
 
 FigureX.m scripts will generate the specified plots and associated statistical analyses.
 
-Note that the scripts use the name "norepinephrine (NE)" instead of "noradrenaline (NA)". 
+Note that some scripts may use the name "norepinephrine (NE)" instead of "noradrenaline (NA)". 
 
 The paths in these scripts require altering the directory variable "repoBase" to point to your local version of the repository.
 
