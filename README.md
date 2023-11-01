@@ -1,7 +1,5 @@
 # article-NA-pupil-IAPS-oddball
 
-**NOTE: The repository is in the process of being populated.**
-
 This repository contains data and code supporting:
 
 <a href="https://www.cell.com/current-biology/fulltext/S0960-9822(23)01355-6">Bang et al. (2023) “Noradrenaline tracks emotional modulation of attention in human amygdala” Current Biology</a>
