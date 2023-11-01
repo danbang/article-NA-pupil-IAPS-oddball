@@ -13,25 +13,21 @@
 % Fresh memory
 clear;
 
-% Paths [change 'dirBase' according to local setup]
+% Custom functions
+addpath('Functions');
+
+% Paths [edit 'getBase' according to local setup]
 fs= filesep;
-dirBase= getIAPS;
+dirBase= getBase;
 dirDataI= [dirBase,fs,'Data',fs,'Images']; % IAPS
 
-% Load image data
-load([dirDataI,fs,'iaps_image_info.mat']);
+% Load data
+load([dirDataI,fs,'IAPS_image_info.mat']);
 
 %% -----------------------------------------------------------------------
 %% NORMATIVE
 
 % General specifications
-% Color
-colz_neg= [1 .4 .4];
-colz_pos= [.2 1 .2];
-colz_low= [97 180 213]./255;
-colz_high= [200 105 213]./255;
-colz_neu= [102 102 255]./255;
-% Rest
 alphaz= .6;
 lw= 2;
 factor= 4;
@@ -73,7 +69,7 @@ plot(x,y,'o','color',[1 1 1],'markerfacecolor',[93 241 97]./255,'markersize',ms)
 % % % neutral
 x= iaps.arousal_rating(iaps.valence_category==0 & iaps.arousal_category==0);
 y= iaps.valence_rating(iaps.valence_category==0 & iaps.arousal_category==0);
-plot(x,y,'s','color',[1 1 1],'markerfacecolor',colz_neu,'markersize',ms);
+plot(x,y,'s','color',[1 1 1],'markerfacecolor',[102 102 255]./255,'markersize',ms);
 % tidy up
 set(gca,'FontSize',axisFS,'LineWidth',lw);
 set(gca,'XTick',[2:2:8],'YTick',[2:2:8]);

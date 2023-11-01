@@ -1,9 +1,9 @@
 % Bang et al (2023) Noradrenaline tracks emotional modulation of attention
 % in human amygdala
 %
-% Reproduces Figure 1C: macro-micro electrodes
+% Figure 1C: macro-micro electrodes
 %
-% Plots calibration data for DA, 5-HT, and NE
+% Plots calibration data for DA, 5-HT, and NA
 %
 % Dan Bang danbang@cfin.au.dk 2023
 
@@ -13,19 +13,20 @@
 % Fresh memory
 clear;
 
-% Paths [change 'dirBase' according to local setup]
-fs= filesep;
-dirBase= getIAPS;
-dirDataB= [dirBase,fs,'Data',fs,'Patients',fs,'Behaviour']; % behaviour
-dirDataC= [dirBase,fs,'Data',fs,'Patients',fs,'Calibration']; % in-vitro calibration
-dirDataP= [dirBase,fs,'Data',fs,'Patients',fs,'Pupil']; % pupillometry
-dirDataV= [dirBase,fs,'Data',fs,'Patients',fs,'Voltammetry']; % voltammetry
-
 % Custom functions
 addpath('Functions');
 
+% Paths [edit 'getBase' according to local setup]
+fs= filesep;
+dirBase= getBase;
+dirDataB= [dirBase,fs,'Data',fs,'Patients',fs,'Behaviour']; % behaviour
+dirDataC= [dirBase,fs,'Data',fs,'Patients',fs,'Calibration']; % in-vitro calibration
+dirDataP= [dirBase,fs,'Data',fs,'Patients',fs,'Pupillometry']; % pupillometry
+dirDataV= [dirBase,fs,'Data',fs,'Patients',fs,'Voltammetry']; % voltammetry
+
 % Electrode
 electrode= 'MM'; % macro-micro
+electrode_for_plot= 'Macro-micro';
 
 % Subjects
 n_sbj= 3;
@@ -38,14 +39,15 @@ i_ne= 4;
 v_nt= [1 2 4];
 
 %% -----------------------------------------------------------------------
-%% RUN
+%% COLLATE GROUP-LEVEL DATA
 
 % Loop through subjects
 for i_sbj= 1:n_sbj;
     
     % Load calibration data
-    c_true_matrix= csvread([dirDataC,fs,electrode,'_',num2str(i_sbj),'_true.csv']);
-    c_pred_matrix= csvread([dirDataC,fs,electrode,'_',num2str(i_sbj),'_prediction.csv']);
+    c_sbj= sprintf( '%03d', i_sbj);
+    c_true_matrix= csvread([dirDataC,fs,electrode,'_',c_sbj,'_true.csv']);
+    c_pred_matrix= csvread([dirDataC,fs,electrode,'_',c_sbj,'_prediction.csv']);
     
     % Identify mixture and non-mixture samples
     c_true_matrix_no_pH= [c_true_matrix(:,i_da) c_true_matrix(:,i_se) c_true_matrix(:,i_ne)];
@@ -187,8 +189,7 @@ for i_pred= 1:3;
     set(gca,'FontSize',axisFS,'LineWidth',lw);
     xlabel('True NA or DA or 5-HT [nM]','FontSize',labelFS);
     ylabel(['Predicted ',chem_names{i_pred},' [nM]'],'FontSize',labelFS);
-    title('Macro-micro','FontWeight','normal','FontSize',labelFS);
-    set(gca,'LineWidth',4);
+    title(electrode_for_plot,'FontWeight','normal','FontSize',labelFS);
     xlim([-500 2500]);
     ylim([-500 2500]);
     box on;
