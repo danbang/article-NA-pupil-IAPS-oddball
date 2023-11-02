@@ -2,8 +2,8 @@
 
 Each subject directory contains three files:
 
-- behavior.parquet — time-corrected behavior
-- predictions.parquet — predictions
+- behavior.parquet — behavioral data
+- predictions.parquet — neuromodulator predictions
 - pupillometry.parquet — pre-processed pupillometry
 
 
