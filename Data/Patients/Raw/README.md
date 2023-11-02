@@ -22,7 +22,7 @@ Parquet files are binary, cross-platform, compressed tabular data files from [Ap
 
 #### behavior.parquet
 
-In this file, behavioral events are presented in tabular form. Each row represents a punctate event, though not necessarily a unique point in time, as some events happen concurrently. Except for the **time** and **eventType** columns, each column represents a task state variable for each event. The values of these variables represent the task state immediately after the event takes place, i.e. if an event results in a change in task state, the new value will be reflected in the event row.
+In this file, behavioral events are presented in tabular form. Each row represents a punctate event, though not necessarily a unique point in time, as some events happen concurrently. Except for the **time** and **eventType** columns, each column represents a task state variable for each event. The values of these variables represent the task state immediately after the event takes place. In other words, if an event results in a change in task state, the new value will be reflected in the event row.
 
 ##### Variables
 
