@@ -12,4 +12,6 @@ Note that some scripts may use the name "norepinephrine (NE)" instead of "noradr
 
 The scripts relating to pupil-NA coupling (Figure4.m and Figure S4.m) use the input and output files for the HMM analysis for simplicity. An accompanying HMM tutorial for the paper can be found <a href="https://github.com/Beniamino92/mvHMM/tree/main/HMM-NE-pupil-IAPS-oddball">here</a>.
 
+The code for pre-processing the pupil data can be found <a href="https://github.com/jas0nwhite/hive-pupil">here</a>.
+
 This code is being released with a permissive open-source license. You should feel free to use or adapt the code as long as you follow the terms of the license. If you make use of the code, we would appreciate that you cite the paper.
